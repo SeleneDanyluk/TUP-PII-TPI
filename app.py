@@ -21,10 +21,10 @@ while respuesta != "salir":
     os.system ("cls") #Limpiar pantalla
     if opt.isnumeric():
         if int(opt) == 1:
-            #completar
-            print()
+            biblio.prestar_ejemplar_libro()
+            print() #tenemos que analizar si lo dejamos
         elif int(opt) == 2:
-            #completar
+            biblio.devolver_ejemplar_libro()
             print()
         elif int(opt) == 3:
             nuevo_libro = biblio.registrar_nuevo_libro()

@@ -8,9 +8,9 @@ import cod_generator as generador_cod
 def nuevo_libro():
     codigo = generar_codigo()
     cant_ad = int(input("Ingrese la cantidad de ejemplares: "))
-    cant_pr = int(input("Ingrese la cantidad de ejemplares prestados"))
-    title = input("Ingrese el título del libro")
-    autor_libro = input("Ingrese el autor del libro")
+    cant_pr = int(input("Ingrese la cantidad de ejemplares prestados: "))
+    title = input("Ingrese el título del libro: ")
+    autor_libro = input("Ingrese el autor del libro: ")
     
     libro = {'cod': codigo, 'cant_ej_ad': cant_ad, 'cant_ej_pr': cant_pr, "titulo": title, "autor": autor_libro}
     
