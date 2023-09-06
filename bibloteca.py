@@ -9,7 +9,8 @@ libros.append(l.libro2)
 libros.append(l.libro3)
 
 def ejemplares_prestados():
-    # completar
+    for libro in libros:
+        print(f"{libro['cod']} - {libro['titulo']} - Cantidad de ejemplares prestados: {libro['cant_ej_pr']}")
     return None
 
 def registrar_nuevo_libro():
@@ -61,7 +62,9 @@ def devolver_ejemplar_libro():
     print("Error! El codigo ingresado no existe.")
     return None
 
-#esta funcion esta repetida?
-def nuevo_libro():
-    #completar
-    return None
+def mostrar_libro(libro):
+    print(f"Código: {libro['cod']}")
+    print(f"Ejemplares adquiridos: {libro['cant_ej_ad']}")
+    print(f"Ejemplares prestados: {libro['cant_ej_pr']}")
+    print(f"Título: {libro['titulo']}")
+    print(f"Autor: {libro['autor']}")
