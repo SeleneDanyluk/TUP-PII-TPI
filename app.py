@@ -2,6 +2,7 @@
 
 
 import os
+import bibloteca as biblio
 
 print("Bienvenido!")
 respuesta = ''
@@ -26,8 +27,8 @@ while respuesta != "salir":
             #completar
             print()
         elif int(opt) == 3:
-            #completar
-            print()
+            nuevo_libro = biblio.registrar_nuevo_libro()
+            print(nuevo_libro['cod'], nuevo_libro['cant_ej_ad'], nuevo_libro['cant_ej_pr'], nuevo_libro['titulo'], nuevo_libro['autor'])
         elif int(opt) == 4:
             #completar
             print()
