@@ -18,11 +18,19 @@ def registrar_nuevo_libro():
     return nuevo_libro
 
 def eliminar_ejemplar_libro():
-    #completar
+    #consultar si es un solo ejemplar o le pedimos al usuario que ingrese la cantidad.
+    codigo = input("Ingrese el código del libro: ")
+    for libro in libros:
+        if libro['cod'] == codigo:
+            libro['cant_ej_ad'] -= 1
+            print(f"La cantidad de ejemplares adquiridos del libro {libro['titulo']} actualizada es: {libro['cant_ej_ad']}") 
+            return None
+    
+    print("Error! El código ingresado no existe.")
     return None
 
 def prestar_ejemplar_libro():
-    codigo = input("Ingrese el codigo del libro: ")
+    codigo = input("Ingrese el código del libro: ")
 
     for libro in libros:
         if libro['cod'] == codigo:
@@ -36,16 +44,16 @@ def prestar_ejemplar_libro():
                 print("Prestamo confirmado!")
                 libro['cant_ej_pr'] = libro['cant_ej_pr'] + 1
             return None
-    print("Error! El codigo ingresado no existe.")
+    print("Error! El código ingresado no existe.")
     return None
 
 def devolver_ejemplar_libro():
-    codigo = input("Ingrese el codigo del libro: ")
+    codigo = input("Ingrese el código del libro: ")
     for libro in libros:
         if libro['cod'] == codigo:
 
             if  libro['cant_ej_pr'] >= 1:
-                print("Se realizó la devolución correctamente")
+                print("Se realizó la devolución correctamente.")
                 libro['cant_ej_pr'] = libro['cant_ej_pr'] - 1
             else:
                 print("Error! Este libro no posee ejemplares prestados.")
@@ -53,6 +61,7 @@ def devolver_ejemplar_libro():
     print("Error! El codigo ingresado no existe.")
     return None
 
+#esta funcion esta repetida?
 def nuevo_libro():
     #completar
     return None

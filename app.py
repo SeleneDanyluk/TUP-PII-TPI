@@ -30,8 +30,7 @@ while respuesta != "salir":
             nuevo_libro = biblio.registrar_nuevo_libro()
             print(nuevo_libro['cod'], nuevo_libro['cant_ej_ad'], nuevo_libro['cant_ej_pr'], nuevo_libro['titulo'], nuevo_libro['autor'])
         elif int(opt) == 4:
-            #completar
-            print()
+            biblio.eliminar_ejemplar_libro()
         elif int(opt) == 5:
             #completar
             print()
