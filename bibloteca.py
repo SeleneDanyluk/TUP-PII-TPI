@@ -10,7 +10,10 @@ libros.append(l.libro3)
 
 def ejemplares_prestados():
     for libro in libros:
-        print(f"{libro['cod']} - {libro['titulo']} - Cantidad de ejemplares prestados: {libro['cant_ej_pr']}")
+        if libro['cant_ej_pr'] > 0 :
+            print(f"{libro['cod']} - {libro['titulo']} - Cantidad de ejemplares prestados: {libro['cant_ej_pr']}")
+        elif libro['cant_ej_pr'] == 0:
+            print(f"El libro {libro['titulo']} no tiene ejemplares prestados.")
     return None
 
 def registrar_nuevo_libro():
